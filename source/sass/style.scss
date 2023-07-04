@@ -15,6 +15,14 @@
 @import "global/utils";
 @import "global/container";
 
+.container h1 {
+  @include title-h3;
+}
+
+.container p {
+  @include btn-regular;
+}
+
 // Blocks
 // ---------------------------------
 
