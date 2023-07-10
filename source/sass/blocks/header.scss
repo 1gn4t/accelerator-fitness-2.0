@@ -1,0 +1,61 @@
+.header {
+  background: $gradient-main-screen;
+}
+
+.header__wrap {
+  justify-content: space-between;
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  display: flex;
+  margin: 0 auto;
+  padding: 30px 20px 30px 20px;
+  max-width: $vp-1200;
+
+  @include vp-1199 {
+    padding: 35px 45px 20px;
+  }
+
+  @include vp-767 {
+    padding: 15px 15px;
+  }
+}
+
+.header__logo {
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: 0.02em;
+  color: $white;
+
+  @include vp-1199 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.header__tel {
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: $white;
+
+  @include vp-1199 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,152 @@
+.tab {
+  background-color: $light;
+}
+
+.tab__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  max-width: $vp-1200;
+}
+
+.tab__title {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: $primary;
+  margin: 0;
+  padding: 0;
+}
+
+.tab__btns {
+  display: flex;
+  gap: 35px;
+  border-bottom: 2px solid $grey;
+  padding: 0 0 8px 0;
+  margin: 0;
+}
+
+.tab__btn {
+  position: relative;
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: rgba($primary, 0.5);
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+
+  &--active {
+    color: $primary;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $red;
+      width: 100%;
+      height: 2px;
+      top: 40px;
+      left: 0;
+    }
+  }
+}
+
+.tab__container {
+}
+
+.tab__content {
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  list-style: none;
+  margin: 23px 0 0;
+  padding: 0;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.tab__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 60px 74px;
+  background-color: $white;
+  border: 7px solid $white;
+
+  @include hover {
+    border-image-source: linear-gradient(
+      148.82deg,
+      #d10a42 0.85%,
+      #00359f 100%
+    );
+    border-image-slice: 1;
+  }
+}
+
+.tab__card-title {
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  color: $primary;
+  margin: 0;
+  padding: 0;
+}
+
+.tab__card-subtitle {
+  @include text-regular;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+.tab__card-price {
+  position: relative;
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 90px;
+  letter-spacing: 0em;
+  color: $blue;
+  margin: 65px 0 35px 0;
+  padding: 0;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: attr(value);
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 150px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #e8e8e8;
+    z-index: -1;
+    bottom: -5px;
+    right: -20px;
+  }
+}
+
+.tab__card-link {
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  padding: 25px 43px;
+  border: 2px solid $primary;
+}

@@ -1,0 +1,128 @@
+.hero__wrap {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  padding: 38px 20px 98px;
+  max-width: $vp-1200;
+
+  @include vp-1199 {
+    justify-content: center;
+    gap: 30px;
+    padding: 0 45px 82px 65px;
+  }
+
+  @include vp-767 {
+    padding: 55px 15px 74px;
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 298px;
+  margin-left: 98px;
+
+  @include vp-1199 {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
+.hero_city {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  color: $white;
+  padding: 20px 50px 20px;
+
+  @include vp-1199 {
+    font-size: 34px;
+    line-height: 41px;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.hero__title {
+  @include title-h1;
+  color: $white;
+  text-align: end;
+  margin: 0 0 40px 0;
+  padding: 0;
+  position: relative;
+
+  &::before {
+    content: "Тренажёрный зал Групповые занятия Кардио-зона ";
+    position: absolute;
+    @include text-small;
+    max-width: 113px;
+    top: 118px;
+    left: -79px;
+
+    @include vp-1199 {
+      top: 82px;
+      left: -23px;
+    }
+
+    @include vp-767 {
+      top: 75px;
+      left: 0;
+    }
+  }
+
+  @include vp-1199 {
+    margin: 15px 0 25px;
+  }
+}
+
+.hero__btn {
+  @include btn-regular;
+  color: $white;
+  text-transform: uppercase;
+  background-color: inherit;
+  border: solid 4px $white;
+  padding: 22px 56px;
+
+  @include vp-1199 {
+    padding: 22px 33px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.hero__img {
+  position: absolute;
+  top: -51px;
+  right: 220px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  @include vp-1199 {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 324px;
+    height: 390px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

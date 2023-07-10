@@ -12,17 +12,17 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__wrap">
-          <span class="header__logo">SUPERGYM</span>
-          <div class="header__promo">
-            <p class="header__text">
-              Тренажёрный зал Групповые занятия Кардио-зона
-            </p>
-            <div>
-              <span class="header_city">омск</span>
-              <h1 class="header__title">ФИТНЕС ЦЕНТР</h1>
-              <button class="header__btn">Купить абонемент</button>
+          <a class="header__logo" href="index.html">SUPERGYM</a>
+          <a class="header__tel" href="tel:88005555555">8-800-555-55-55</a>
+        </div>
+        <section class="hero">
+          <div class="hero__wrap">
+            <div class="hero__container">
+              <span class="hero_city">омск</span>
+              <h1 class="hero__title">ФИТНЕС ЦЕНТР</h1>
+              <button class="hero__btn">Купить абонемент</button>
             </div>
-            <picture>
+            <picture class="hero__img">
               <source
                 type="image/webp"
                 srcset="
@@ -41,64 +41,266 @@
               />
             </picture>
           </div>
-          <a class="header__tel" href="tel:88005555555">8-800-555-55-55</a>
-        </div>
+        </section>
       </header>
       <main>
-        <section class="intro">
-          <div class="container"></div>
+        <section class="gym">
+          <div class="gym__wrap">
+            <div class="gym__info">
+              <h3 class="gym__title">Тренажерный зал</h3>
+              <span class="gym__subtitle"
+                >Просторный зал площадью 900 кв/м</span
+              >
+              <div class="gym__text-wrap">
+                <p class="gym__text">
+                  Supergym – самый большой фитнес центр за Уралом и идеальное
+                  место для укрепления тела и здоровья. Тренажерный зал оснащен
+                  всем необходимым современным оборудованием для всех
+                  спортсменов.
+                </p>
+                <p class="gym__text">
+                  В зале расположены отдельная зона для Crossfit и кардио-зона с
+                  40 тренажерами. Также в фитнес центре есть несколько
+                  оборудованных залов для различных видов групповых занятий.
+                </p>
+              </div>
+            </div>
+            <picture class="gym__img">
+              <!-- <source
+                type="image/webp"
+                srcset="./img/gym/gym.webp, ./img/gym/gym@2x.webp 2x"
+                width="660"
+                height="401"
+              />
+              <source
+                type="image/webp"
+                srcset="./img/gym/gym.webp, ./img/gym/gym@2x.webp 2x"
+                width="660"
+                height="401"
+              /> -->
+              <source
+                media="(max-width:320px)"
+                srcset="
+                  ./img/gym/gym-mobile.png    1x,
+                  ./img/gym/gym-mobile@2x.png 2x
+                "
+                width="320"
+                height="313"
+              />
+              <source
+                media="(max-width:1024px)"
+                srcset="
+                  ./img/gym/gym-tablet.png    1x,
+                  ./img/gym/gym-tablet@2x.png 2x
+                "
+                width="678"
+                height="345"
+              />
+              <img
+                src="./img/gym/gym.png"
+                srcset="./img/gym/gym@2x.png"
+                alt="Тренажерный зал"
+                width=" 660"
+                height="401"
+              />
+            </picture>
+            <div class="gym__video">
+              <!-- <iframe
+                class="gym__video-iframe"
+                width="364"
+                height="228"
+                src="https://www.youtube.com/embed/9TZXsZItgdw?controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe> -->
+              <button class="gym__video-play"></button>
+            </div>
+          </div>
+        </section>
+        <section class="tab">
+          <div class="tab__wrap">
+            <h3 class="tab__title">Абонементы</h3>
+            <div class="tab__btns">
+              <button data-id="1" class="tab__btn tab__btn--active">1 месяц</button>
+              <button data-id="2" class="tab__btn">6 месяцев</button>
+              <button data-id="3" class="tab__btn">12 месяцев</button>
+            </div>
+            <div class="tab__container">
+              <ul data-tab="1" class="tab__content tab__content--active">
+                <li class="tab__card">
+                  <h4 class="tab__card-title">С тренером</h4>
+                  <span class="tab__card-subtitle">12 занятий </span>
+                  <span class="tab__card-price" value="5000"
+                    >5000
+                    <svg class="footer__icon" width="30" height="42">
+                      <use href="./img/sprite.svg#rub"></use>
+                    </svg>
+                  </span>
+                  <a class="tab__card-link" href="subscription.html"
+                    >купить абонемент</a
+                  >
+                </li>
+                <li class="tab__card">
+                  <h4 class="tab__card-title">Дневной</h4>
+                  <span class="tab__card-subtitle">с 8:00 до 17:00</span>
+                  <span class="tab__card-price" value="1700"
+                    >1700
+                    <svg class="footer__icon" width="30" height="42">
+                      <use href="./img/sprite.svg#rub"></use>
+                    </svg>
+                  </span>
+                  <a class="tab__card-link" href="subscription.html"
+                    >купить абонемент</a
+                  >
+                </li>
+                <li class="tab__card">
+                  <h4 class="tab__card-title">Полный день</h4>
+                  <span class="tab__card-subtitle">с 8:00 до 22:00 </span>
+                  <span class="tab__card-price" value="2700"
+                    >2700
+                    <svg class="footer__icon" width="30" height="42">
+                      <use href="./img/sprite.svg#rub"></use>
+                    </svg>
+                  </span>
+                  <a class="tab__card-link" href="subscription.html"
+                    >купить абонемент</a
+                  >
+                </li>
+              </ul>
+              <ul data-tab="2" class="tab__content">
+                <li class="tab__card">
+                  <h4 class="tab__card-title">С тренером</h4>
+                  <span class="tab__card-subtitle">12 занятий </span>
+                  <span class="tab__card-price" value="26000"
+                    >26000
+                    <svg class="footer__icon" width="30" height="42">
+                      <use href="./img/sprite.svg#rub"></use>
+                    </svg>
+                  </span>
+                  <a class="tab__card-link" href="subscription.html"
+                    >купить абонемент</a
+                  >
+                </li>
+                <li class="tab__card">
+                  <h4 class="tab__card-title">Дневной</h4>
+                  <span class="tab__card-subtitle">с 8:00 до 17:00</span>
+                  <span class="tab__card-price" value="9000"
+                    >9000
+                    <svg class="footer__icon" width="30" height="42">
+                      <use href="./img/sprite.svg#rub"></use>
+                    </svg>
+                  </span>
+                  <a class="tab__card-link" href="subscription.html"
+                    >купить абонемент</a
+                  >
+                </li>
+                <li class="tab__card">
+                  <h4 class="tab__card-title">Полный день</h4>
+                  <span class="tab__card-subtitle">с 8:00 до 22:00 </span>
+                  <span class="tab__card-price" value="15000"
+                    >15000
+                    <svg class="footer__icon" width="30" height="42">
+                      <use href="./img/sprite.svg#rub"></use>
+                    </svg>
+                  </span>
+                  <a class="tab__card-link" href="subscription.html"
+                    >купить абонемент</a
+                  >
+                </li>
+              </ul>
+              <ul data-tab="3" class="tab__content">
+                <li class="tab__card">
+                  <h4 class="tab__card-title">С тренером</h4>
+                  <span class="tab__card-subtitle">12 занятий </span>
+                  <span class="tab__card-price" value="50000"
+                    >50000
+                    <svg class="footer__icon" width="30" height="42">
+                      <use href="./img/sprite.svg#rub"></use>
+                    </svg>
+                  </span>
+                  <a class="tab__card-link" href="subscription.html"
+                    >купить абонемент</a
+                  >
+                </li>
+                <li class="tab__card">
+                  <h4 class="tab__card-title">Дневной</h4>
+                  <span class="tab__card-subtitle">с 8:00 до 17:00</span>
+                  <span class="tab__card-price" value="17000"
+                    >17000
+                    <svg class="footer__icon" width="30" height="42">
+                      <use href="./img/sprite.svg#rub"></use>
+                    </svg>
+                  </span>
+                  <a class="tab__card-link" href="subscription.html"
+                    >купить абонемент</a
+                  >
+                </li>
+                <li class="tab__card">
+                  <h4 class="tab__card-title">Полный день</h4>
+                  <span class="tab__card-subtitle">с 8:00 до 22:00 </span>
+                  <span class="tab__card-price" value="30000"
+                    >30000
+                    <svg class="footer__icon" width="30" height="42">
+                      <use href="./img/sprite.svg#rub"></use>
+                    </svg>
+                  </span>
+                  <a class="tab__card-link" href="subscription.html"
+                    >купить абонемент</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="footer__wrap">
+          <a class="footer__logo" href="index.html">SUPERGYM</a>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Услуги</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Абонементы</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Акции</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Тренеры</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Расписание</a>
+            </li>
+          </ul>
+          <ul class="footer__social">
+            <li class="footer__item-icon">
+              <a href="#" class="footer__link-icon">
+                <svg class="footer__icon" width="12" height="7">
+                  <use href="./img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__item-icon">
+              <a href="#" class="footer__link-icon">
+                <svg class="footer__icon" width="9" height="16">
+                  <use href="./img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__item-icon">
+              <a href="#" class="footer__link-icon">
+                <svg class="footer__icon" width="14" height="14">
+                  <use href="./img/sprite.svg#reddit"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </footer>
     </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button
-            class="modal__close-btn btn-reset"
-            type="button"
-            aria-label="Закрыть попап"
-            data-close-modal
-          >
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="modal modal--preload modal--fit-content modal--no-scale"
-      data-modal="success"
-    >
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">
-            Размер этой модалки зависит от ширины контента,<br />
-            отключена анимация-скейл
-          </p>
-          <button
-            class="modal__close-btn btn-reset"
-            type="button"
-            aria-label="Закрыть попап"
-            data-close-modal
-          >
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
