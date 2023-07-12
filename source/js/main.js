@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {Tab} from './modules/tab/tab';
 import {TicketConfig} from './modules/tab/ticketConfig';
+import {Trainer} from './modules/trainer/trainer-slider';
 
 // ---------------------------------
 
@@ -17,6 +18,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   const ticket = new Tab(new TicketConfig());
   ticket.init();
+
+  const trainer = new Trainer();
+  trainer.event();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

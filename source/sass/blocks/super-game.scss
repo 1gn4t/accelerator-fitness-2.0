@@ -1,0 +1,164 @@
+.super-game {
+  margin: 0 auto;
+  padding: 105px 20px 105px;
+
+  @include vp-1023 {
+    padding: 110px 45px 100px;
+  }
+
+  @include vp-767 {
+    padding: 74px 15px 60px;
+  }
+}
+
+.super-game__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin: 0 auto;
+  padding: 0;
+  max-width: $vp-1200 - 40px;
+  background-color: $banners;
+  background-image: url("../../img/background/game.png");
+  background-size: 660px 500px;
+  background-repeat: no-repeat;
+  background-position: right;
+  color: $white;
+
+  @include vp-1023 {
+    background-size: 386px 292px;
+  }
+
+  @include vp-767 {
+    justify-content: center;
+    padding-bottom: 292px;
+    background-size: auto 292px;
+    background-position: bottom;
+  }
+}
+
+.super-game__info {
+  display: grid;
+  grid-template-areas: "title date" "title time" "sub sub" "link link";
+  row-gap: 5px;
+  column-gap: 50px;
+  margin: 0;
+  padding: 85px 78px;
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 50px 35px 50px 45px;
+    row-gap: 0;
+    column-gap: 30px;
+  }
+}
+
+.super-game__title {
+  grid-area: title;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 82px;
+  font-weight: 600;
+  line-height: 79px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  max-width: 201px;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    font-size: 48px;
+    line-height: 46px;
+    max-width: 117px;
+  }
+}
+
+.super-game__date {
+  grid-area: date;
+  display: flex;
+  flex-direction: column;
+
+  &--time {
+    grid-area: time;
+  }
+}
+
+.super-game__str {
+}
+
+.super-game__number {
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-top: solid 2px $white;
+
+  @include vp-1023 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &--date {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    max-width: 64px;
+
+    @include vp-1023 {
+      gap: 4px;
+      max-width: 40px;
+    }
+
+    &::after {
+      content: "Марта 2019";
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+
+      @include vp-1023 {
+        font-size: 10px;
+        line-height: 15px;
+      }
+    }
+  }
+}
+
+.super-game__subtitle {
+  grid-area: sub;
+
+  @include vp-1023 {
+    margin-top: 5px;
+  }
+}
+
+.super-game__link {
+  grid-area: link;
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  margin: 40px 0 0;
+  padding: 25px 110px;
+  border: solid 4px $white;
+
+  @include vp-1023 {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 14px 52px;
+    border: solid 2px $white;
+    margin: 30px 0 0;
+  }
+}

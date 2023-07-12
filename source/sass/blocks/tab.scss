@@ -11,6 +11,15 @@
   margin: 0 auto;
   padding: 120px 20px;
   max-width: $vp-1200;
+
+  @include vp-1199 {
+    gap: 20px;
+    padding: 100px 45px 95px;
+  }
+
+  @include vp-767 {
+    padding: 58px 15px 75px;
+  }
 }
 
 .tab__title {
@@ -22,6 +31,16 @@
   color: $primary;
   margin: 0;
   padding: 0;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 .tab__btns {
@@ -30,6 +49,14 @@
   border-bottom: 2px solid $grey;
   padding: 0 0 8px 0;
   margin: 0;
+
+  @include vp-1199 {
+    gap: 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 0 12px 0;
+  }
 }
 
 .tab__btn {
@@ -43,6 +70,18 @@
   border: none;
   background-color: inherit;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &--active {
     color: $primary;
@@ -54,6 +93,10 @@
       height: 2px;
       top: 40px;
       left: 0;
+
+      @include vp-1199 {
+        top: 38px;
+      }
     }
   }
 }
@@ -70,6 +113,16 @@
   margin: 23px 0 0;
   padding: 0;
 
+  @include vp-1199 {
+    gap: 40px;
+    margin: 25px 0 0;
+  }
+
+  @include vp-767 {
+    gap: 39px;
+    margin: 15px 0 0;
+  }
+
   &--active {
     display: flex;
   }
@@ -84,6 +137,14 @@
   padding: 55px 60px 74px;
   background-color: $white;
   border: 7px solid $white;
+
+  @include vp-1199 {
+    padding: 55px 108px 60px;
+  }
+
+  @include vp-767 {
+    padding: 45px 35px 40px;
+  }
 
   @include hover {
     border-image-source: linear-gradient(
@@ -104,6 +165,11 @@
   color: $primary;
   margin: 0;
   padding: 0;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+  }
 }
 
 .tab__card-subtitle {
@@ -124,6 +190,12 @@
   padding: 0;
   z-index: 1;
 
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 72px;
+    margin: 55px 0 30px 0;
+  }
+
   &::before {
     position: absolute;
     content: attr(value);
@@ -136,6 +208,20 @@
     z-index: -1;
     bottom: -5px;
     right: -20px;
+
+    @include vp-767 {
+      font-size: 80px;
+      line-height: 120px;
+      bottom: 0;
+      right: -15px;
+    }
+  }
+}
+
+.tab__card-icon {
+  @include vp-767 {
+    width: 24px;
+    height: 33px;
   }
 }
 
