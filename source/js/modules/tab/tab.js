@@ -2,6 +2,7 @@ export class Tab {
   constructor(config) {
     this.btns = config.btns;
     this.tabs = config.tabs;
+    this.tab = config.tab;
     this.btnActive = config.btnActive;
     this.tabActive = config.tabActive;
   }
@@ -15,8 +16,7 @@ export class Tab {
   event(element) {
     element.addEventListener('click', () => {
       let tabId = element.dataset.id;
-      let currentTab = document.querySelector(`[data-tab="${tabId}"]`);
-
+      let currentTab = document.querySelector(`.${this.tab}[data-tab="${tabId}"]`);
       this.hide();
       this.show(element, currentTab);
     });

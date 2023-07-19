@@ -17,7 +17,8 @@
   }
 
   @include vp-767 {
-    padding: 60px 0;
+    padding: 60px 0 77px;
+    gap: 35px;
   }
 }
 
@@ -117,44 +118,182 @@
 .gym__img {
 }
 
-.gym__video {
+.gym__video-wrap {
   position: absolute;
   z-index: 5;
   top: 405px;
   left: 38%;
+  width: 364px;
+  height: 228px;
 
   @include vp-1023 {
     top: 583px;
-    left: 33%;
-  }
-
-  @include vp-767 {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-}
-
-.gym__video-iframe {
-  @include vp-1023 {
+    left: 50%;
+    transform: translate(-50%);
     width: 266px;
     height: 167px;
   }
 
   @include vp-767 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 167px;
+  }
+
+
+  &::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    background-color: rgba($primary, 0.5);
+    z-index: 2;
+
+    @include vp-767 {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 320px;
+    }
+  }
+
+  &--hidden {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.gym__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include vp-767 {
+    position: relative;
     width: 320px;
+    height: 167px;
   }
 }
 
 .gym__video-play {
   position: absolute;
-  top: 30%;
-  left: 35%;
+  top: 29%;
+  left: 37%;
   z-index: 10;
   width: 100px;
   height: 100px;
-  background: $gradient-text;
-  // border: 7px solid;
   border-radius: 50%;
-  // border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  border: none;
+  background-color: inherit;
+  background-image: url("../../img/background/background-play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+
+  @include vp-1023 {
+    width: 73px;
+    height: 73px;
+    background-size: 73px 73px;
+    left: 35%;
+  }
+
+  @include vp-767 {
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 45%;
+    left: 47%;
+    background-color: $white;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(90deg);
+    z-index: 2;
+
+    @include vp-1023 {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-13%, -13%);
+    z-index: 10;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
+    z-index: 1;
+
+    @include vp-1023 {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  @include hover-focus {
+    background-color: inherit;
+    border: 2px solid $primary;
+    transition: all 1s;
+
+    &::after {
+      display: none;
+      transition: all 1s;
+    }
+
+    &::before {
+      background-color: $primary;
+      transition: all 1s;
+    }
+  }
+
+  @include active {
+    background-color: inherit;
+    border: 2px solid $primary;
+    transition: all 1s;
+
+    &::after {
+      display: none;
+      transition: all 1s;
+    }
+
+    &::before {
+      background-color: $primary;
+      transition: all 1s;
+    }
+  }
+
+  &::disable {
+    opacity: 0.5;
+    background-color: inherit;
+    border: 2px solid $primary;
+    transition: all 1s;
+
+    &::after {
+      display: none;
+      transition: all 1s;
+    }
+
+    &::before {
+      background-color: $primary;
+      transition: all 1s;
+    }
+  }
 }

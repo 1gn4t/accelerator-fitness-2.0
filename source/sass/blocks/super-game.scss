@@ -21,10 +21,16 @@
   max-width: $vp-1200 - 40px;
   background-color: $banners;
   background-image: url("../../img/background/game.png");
+  background-image: url("../../img/background/game.webp");
   background-size: 660px 500px;
   background-repeat: no-repeat;
   background-position: right;
   color: $white;
+
+  @include retina {
+    background-image: url("../../img/background/game@2x.png");
+    background-image: url("../../img/background/game@2x.webp");
+  }
 
   @include vp-1023 {
     background-size: 386px 292px;
@@ -160,5 +166,19 @@
     padding: 14px 52px;
     border: solid 2px $white;
     margin: 30px 0 0;
+  }
+
+  @include hover-focus {
+    background-color: $white;
+    color: $blue;
+  }
+
+  @include active {
+    background-color: $white;
+    color: $primary;
+  }
+
+  &::disable {
+    opacity: 0.5;
   }
 }

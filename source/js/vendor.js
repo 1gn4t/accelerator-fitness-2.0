@@ -2,7 +2,7 @@
 import './vendor/swiper';
 import './vendor/focus-visible-polyfill';
 
-export const slider = new Swiper('.trainer__slider', {
+export const sliderTrainer = new Swiper('.trainer__slider', {
   loop: true,
   navigation: {
     nextEl: '.trainer__btn--next',
@@ -21,5 +21,13 @@ export const slider = new Swiper('.trainer__slider', {
     320: {
       slidesPerView: 1,
     },
+  },
+});
+
+export const sliderReview = new Swiper('.review__slider', {
+  loop: false,
+  navigation: {
+    nextEl: '.review__btn--next',
+    prevEl: '.review__btn--prev',
   },
 });

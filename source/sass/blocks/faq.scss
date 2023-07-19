@@ -1,0 +1,271 @@
+.faq {
+  background-color: $light;
+}
+
+.faq__wrap {
+  margin: 0 auto;
+  padding: 120px 20px 100px;
+  max-width: $vp-1200;
+
+  @include vp-1023 {
+    padding: 100px 45px 101px;
+  }
+
+  @include vp-767 {
+    padding: 35px 15px 100px;
+  }
+}
+
+.faq__title {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: $primary;
+  margin: 0 0 38px;
+  padding: 0;
+
+  @include vp-1023 {
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin: 0 0 30px;
+  }
+}
+
+.faq__tab {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 40px;
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @include vp-767 {
+    gap: 30px;
+  }
+}
+
+.faq__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include vp-1023 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.faq__btn {
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: $primary;
+  margin: 0;
+  padding: 18px;
+  background-color: inherit;
+  border: 1px solid rgba($primary, 0.2);
+  transition: all 1s linear;
+
+  &--active {
+    background: $gradient-btn;
+    color: $white;
+    transition: all 1s linear;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 13px;
+  }
+}
+
+.faq__list {
+  font-family: "RobotoCondensed", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $primary;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: all 1s linear;
+
+  &--active {
+    position: relative;
+    visibility: visible;
+    height: auto;
+    width: auto;
+    overflow: none;
+    opacity: 1;
+    transition: all 1s linear;
+  }
+
+  @include vp-1023 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.faq__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 31px 0 25px;
+  border-top: 1px solid rgba($primary, 0.2);
+
+  &:last-child {
+    border-bottom: 1px solid rgba($primary, 0.2);
+  }
+
+  @include vp-1023 {
+    gap: 10px;
+  }
+
+  @include vp-767 {
+    gap: 0;
+    padding: 20px 0;
+  }
+}
+
+.faq__label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq__label-title {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+
+  @include vp-1023 {
+    width: 80%;
+  }
+
+  @include vp-767 {
+    width: 76%;
+  }
+}
+
+.faq__checkbox {
+  position: relative;
+  visibility: hidden;
+
+  &:checked {
+    &::after {
+      visibility: visible;
+      background-color: $primary;
+      transition: all 0.2s linear;
+    }
+
+    &::before {
+      content: "";
+      visibility: visible;
+      display: block;
+      position: absolute;
+      top: 16px;
+      left: -16px;
+      width: 18px;
+      height: 1px;
+      background-color: $white;
+      z-index: 1;
+      transition: all 0.3s linear;
+
+      @include vp-767 {
+        width: 12px;
+        top: 50%;
+        left: 0;
+        transform: translate(-9px, -50%);
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    visibility: visible;
+    position: absolute;
+    top: -4px;
+    left: -29px;
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid $primary;
+    background: linear-gradient($primary, $primary),
+      linear-gradient($primary, $primary), $white;
+    background-position: center;
+    background-size: 50% 1px, 1px 50%;
+    background-repeat: no-repeat;
+    transition: all 0.3s linear;
+
+    @include vp-767 {
+      width: 32px;
+      height: 32px;
+      top: 55%;
+      left: 0;
+      transform: translate(-60%, -19px);
+    }
+  }
+}
+
+.faq__text {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.2s linear;
+
+  &--active {
+    margin: 10px 0 0;
+    visibility: visible;
+    height: auto;
+    width: 79%;
+    overflow: none;
+    opacity: 1;
+    transition: all 0.2s linear;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+    min-width: 290px;
+  }
+}

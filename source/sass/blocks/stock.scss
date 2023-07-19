@@ -1,0 +1,240 @@
+.stock {
+}
+
+.stock__wrap {
+  margin: 0 auto;
+  padding: 70px 20px 115px;
+  max-width: $vp-1200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  @include vp-1023 {
+    padding: 5px 45px 105px;
+    gap: 38px;
+  }
+
+  @include vp-767 {
+    padding: 5px 15px 105px;
+    gap: 40px;
+  }
+}
+
+.stock__title {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: $primary;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.stock__list {
+  display: grid;
+  grid-template-areas: "main free" "main sale";
+  grid-template-columns: 1fr 1fr;
+  justify-content: flex-start;
+  gap: 40px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    grid-template-areas: "main main" "free sale";
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-areas: "main" "free" "sale";
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.stock__item {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $primary;
+  margin: 0;
+  padding: 25px 35px 35px 28px;
+  border: 7px solid $white;
+  border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  border-image-slice: 1;
+
+  @include vp-1023 {
+    gap: 54px;
+    padding: 20px 35px 25px 28px;
+  }
+
+  @include vp-767 {
+    text-align: center;
+    gap: 30px;
+    padding: 34px 35px 40px;
+  }
+
+  &--main {
+    display: flex;
+    flex-direction: column;
+    gap: 190px;
+    grid-area: main;
+    font-family: "RobotoCondensed", sans-serif;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $white;
+    background-color: $banners;
+    background-image: url("../../img/background/promotion.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+    padding: 53px 45px 45px 45px;
+    border: none;
+
+    @include vp-767 {
+      padding: 65px 45px 350px 45px;
+      gap: 30px;
+      background-position: bottom;
+      background-size: auto 300px;
+      text-align: center;
+    }
+
+    .stock__item-title {
+      position: relative;
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 109px;
+
+      @include vp-767 {
+        line-height: 87px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "Год";
+        top: -20px;
+        left: 0;
+        font-family: "RobotoCondensed", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0em;
+
+        @include vp-767 {
+          top: -28px;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+
+    .stock__item-text {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      max-width: 190px;
+    }
+
+    .stock__item-link {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 0.05em;
+      color: $white;
+    }
+  }
+
+  &--free {
+    grid-area: free;
+
+    .stock__item-text {
+      @include vp-1023 {
+        max-width: 90%;
+      }
+
+      @include vp-767 {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &--sale {
+    grid-area: sale;
+  }
+}
+
+.stock__item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  @include vp-767 {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.stock__item-title {
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.stock__item-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    min-height: 40px;
+  }
+}
+
+.stock__item-link {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  color: $primary;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin: 0;
+  padding: 0;
+  max-width: 100px;
+
+  @include hover {
+    opacity: 0.7;
+  }
+
+  @include focus {
+    &--main {
+      border: 1px solid $white;
+    }
+    border: 1px solid $primary;
+  }
+
+  &:disable {
+    opacity: 0.5;
+  }
+}

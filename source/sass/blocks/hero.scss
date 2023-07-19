@@ -101,6 +101,21 @@
 
   @include vp-767 {
     width: 100%;
+    text-align: center;
+  }
+
+  @include hover-focus {
+    background-color: $white;
+    color: $blue;
+  }
+
+  @include active {
+    background-color: $white;
+    color: $primary;
+  }
+
+  &::disable {
+    opacity: 0.5;
   }
 }
 
