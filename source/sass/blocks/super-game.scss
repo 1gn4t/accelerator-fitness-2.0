@@ -21,7 +21,6 @@
   max-width: $vp-1200 - 40px;
   background-color: $banners;
   background-image: url("../../img/background/game.png");
-  background-image: url("../../img/background/game.webp");
   background-size: 660px 500px;
   background-repeat: no-repeat;
   background-position: right;
@@ -29,7 +28,6 @@
 
   @include retina {
     background-image: url("../../img/background/game@2x.png");
-    background-image: url("../../img/background/game@2x.webp");
   }
 
   @include vp-1023 {
@@ -55,7 +53,7 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
 
   @include vp-1023 {
     font-size: 12px;
@@ -95,15 +93,12 @@
   }
 }
 
-.super-game__str {
-}
-
 .super-game__number {
   font-family: "RobotoCondensed", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 60px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   border-top: solid 2px $white;
 
@@ -178,7 +173,8 @@
     color: $primary;
   }
 
-  &::disable {
+  &--disable {
     opacity: 0.5;
+    pointer-events: none;
   }
 }

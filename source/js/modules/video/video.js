@@ -33,6 +33,5 @@ export class Video {
     if (this.widthWindow < 768) {
       this.video.setAttribute('poster', './img/gym/video-gym-mobile.png');
     }
-    console.log(this.widthWindow);
   }
 }

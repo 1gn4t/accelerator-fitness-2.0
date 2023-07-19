@@ -1,6 +1,3 @@
-.stock {
-}
-
 .stock__wrap {
   margin: 0 auto;
   padding: 70px 20px 115px;
@@ -72,7 +69,7 @@
   gap: 70px;
   font-family: "RobotoCondensed", sans-serif;
   font-weight: 700;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: $primary;
   margin: 0;
@@ -98,7 +95,7 @@
     gap: 190px;
     grid-area: main;
     font-family: "RobotoCondensed", sans-serif;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     color: $white;
     background-color: $banners;
@@ -136,7 +133,7 @@
         font-size: 28px;
         font-weight: 700;
         line-height: 44px;
-        letter-spacing: 0em;
+        letter-spacing: 0;
 
         @include vp-767 {
           top: -28px;
@@ -234,7 +231,8 @@
     border: 1px solid $primary;
   }
 
-  &:disable {
+  &--disable {
     opacity: 0.5;
+    pointer-events: none;
   }
 }

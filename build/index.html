@@ -66,20 +66,22 @@
               </div>
             </div>
             <picture class="gym__img">
-              <!-- <source
-                type="image/webp"
-                srcset="./img/gym/gym.webp, ./img/gym/gym@2x.webp 2x"
-                width="660"
-                height="401"
-              />
-              <source
-                type="image/webp"
-                srcset="./img/gym/gym.webp, ./img/gym/gym@2x.webp 2x"
-                width="660"
-                height="401"
-              /> -->
               <source
                 media="(max-width:320px)"
+                type="image/webp"
+                srcset="./img/gym/gym.webp, ./img/gym/gym@2x.webp 2x"
+                width="320"
+                height="313"
+              />
+              <source
+                media="(max-width:1024px)"
+                type="image/webp"
+                srcset="./img/gym/gym.webp, ./img/gym/gym@2x.webp 2x"
+                width="678"
+                height="345"
+              />
+              <source
+                media="(max-width:768px)"
                 srcset="
                   ./img/gym/gym-mobile.png    1x,
                   ./img/gym/gym-mobile@2x.png 2x
@@ -98,16 +100,15 @@
               />
               <img
                 src="./img/gym/gym.png"
-                srcset="./img/gym/gym@2x.png"
+                srcset="./img/gym/gym@2x.png 2x"
                 alt="Тренажерный зал"
-                width=" 660"
+                width="660"
                 height="401"
               />
             </picture>
             <div class="gym__video-wrap">
               <video class="gym__video" src="./video/video.mp4" poster="./img/gym/video-gym.png">
-                <p>Ваш браузер не поддерживает HTML5 видео. Вот ссылка на видео <a href="
-                  autoprefixer: D:\stuff\accelerat"></a></p>
+                <p>Ваш браузер не поддерживает HTML5 видео.</p>
               </video>
               <button class="gym__video-play"></button>
             </div>
@@ -128,7 +129,7 @@
                 <li class="tab__card">
                   <h4 class="tab__card-title">С тренером</h4>
                   <span class="tab__card-subtitle">12 занятий </span>
-                  <span class="tab__card-price" value="5000"
+                  <span class="tab__card-price" data-value="5000"
                     >5000
                     <svg class="tab__card-icon" width="30" height="42">
                       <use href="./img/sprite.svg#rub"></use>
@@ -141,7 +142,7 @@
                 <li class="tab__card">
                   <h4 class="tab__card-title">Дневной</h4>
                   <span class="tab__card-subtitle">с 8:00 до 17:00</span>
-                  <span class="tab__card-price" value="1700"
+                  <span class="tab__card-price" data-value="1700"
                     >1700
                     <svg class="tab__card-icon" width="30" height="42">
                       <use href="./img/sprite.svg#rub"></use>
@@ -154,7 +155,7 @@
                 <li class="tab__card">
                   <h4 class="tab__card-title">Полный день</h4>
                   <span class="tab__card-subtitle">с 8:00 до 22:00 </span>
-                  <span class="tab__card-price" value="2700"
+                  <span class="tab__card-price" data-value="2700"
                     >2700
                     <svg class="tab__card-icon" width="30" height="42">
                       <use href="./img/sprite.svg#rub"></use>
@@ -169,7 +170,7 @@
                 <li class="tab__card">
                   <h4 class="tab__card-title">С тренером</h4>
                   <span class="tab__card-subtitle">12 занятий </span>
-                  <span class="tab__card-price" value="26000"
+                  <span class="tab__card-price" data-value="26000"
                     >26000
                     <svg class="tab__card-icon" width="30" height="42">
                       <use href="./img/sprite.svg#rub"></use>
@@ -182,7 +183,7 @@
                 <li class="tab__card">
                   <h4 class="tab__card-title">Дневной</h4>
                   <span class="tab__card-subtitle">с 8:00 до 17:00</span>
-                  <span class="tab__card-price" value="9000"
+                  <span class="tab__card-price" data-value="9000"
                     >9000
                     <svg class="tab__card-icon" width="30" height="42">
                       <use href="./img/sprite.svg#rub"></use>
@@ -195,7 +196,7 @@
                 <li class="tab__card">
                   <h4 class="tab__card-title">Полный день</h4>
                   <span class="tab__card-subtitle">с 8:00 до 22:00 </span>
-                  <span class="tab__card-price" value="15000"
+                  <span class="tab__card-price" data-value="15000"
                     >15000
                     <svg class="tab__card-icon" width="30" height="42">
                       <use href="./img/sprite.svg#rub"></use>
@@ -210,7 +211,7 @@
                 <li class="tab__card">
                   <h4 class="tab__card-title">С тренером</h4>
                   <span class="tab__card-subtitle">12 занятий </span>
-                  <span class="tab__card-price" value="50000"
+                  <span class="tab__card-price" data-value="50000"
                     >50000
                     <svg class="tab__card-icon" width="30" height="42">
                       <use href="./img/sprite.svg#rub"></use>
@@ -223,7 +224,7 @@
                 <li class="tab__card">
                   <h4 class="tab__card-title">Дневной</h4>
                   <span class="tab__card-subtitle">с 8:00 до 17:00</span>
-                  <span class="tab__card-price" value="17000"
+                  <span class="tab__card-price" data-value="17000"
                     >17000
                     <svg class="tab__card-icon" width="30" height="42">
                       <use href="./img/sprite.svg#rub"></use>
@@ -236,7 +237,7 @@
                 <li class="tab__card">
                   <h4 class="tab__card-title">Полный день</h4>
                   <span class="tab__card-subtitle">с 8:00 до 22:00 </span>
-                  <span class="tab__card-price" value="30000"
+                  <span class="tab__card-price" data-value="30000"
                     >30000
                     <svg class="tab__card-icon" width="30" height="42">
                       <use href="./img/sprite.svg#rub"></use>
@@ -282,7 +283,7 @@
             <div class="trainer__slider swiper">
               <ul class="trainer__list swiper-wrapper">
                 <li class="trainer__item swiper-slide">
-                  <span class="trainer__item-name" instructor="CrossFit">
+                  <div class="trainer__item-name" data-instructor="CrossFit">
                     Анна Павлова
                     <ul class="trainer__item-list">
                       <li class="trainer__item-text">
@@ -293,7 +294,7 @@
                       </li>
                       <li class="trainer__item-text">Опыт — 6 лет</li>
                     </ul>
-                  </span>
+                  </div>
                   <picture class="trainer__img">
                     <source
                       type="image/webp"
@@ -314,7 +315,7 @@
                   </picture>
                 </li>
                 <li class="trainer__item swiper-slide">
-                  <span class="trainer__item-name" instructor="CrossFit"
+                  <div class="trainer__item-name" data-instructor="CrossFit"
                     >Алексей Лавров
                     <ul class="trainer__item-list">
                       <li class="trainer__item-text">
@@ -325,7 +326,7 @@
                       </li>
                       <li class="trainer__item-text">Опыт — 6 лет</li>
                     </ul>
-                  </span>
+                  </div>
                   <picture class="trainer__img">
                     <source
                       type="image/webp"
@@ -346,7 +347,7 @@
                   </picture>
                 </li>
                 <li class="trainer__item swiper-slide">
-                  <span class="trainer__item-name" instructor="CrossFit"
+                  <div class="trainer__item-name" data-instructor="CrossFit"
                     >Александр Пашков
                     <ul class="trainer__item-list">
                       <li class="trainer__item-text">
@@ -357,7 +358,7 @@
                       </li>
                       <li class="trainer__item-text">Опыт — 6 лет</li>
                     </ul>
-                  </span>
+                  </div>
                   <picture class="trainer__img">
                     <source
                       type="image/webp"
@@ -378,7 +379,7 @@
                   </picture>
                 </li>
                 <li class="trainer__item swiper-slide">
-                  <span class="trainer__item-name" instructor="CrossFit"
+                  <div class="trainer__item-name" data-instructor="CrossFit"
                     >Мария Кетова
                     <ul class="trainer__item-list">
                       <li class="trainer__item-text">
@@ -388,7 +389,7 @@
                         Победитель чемпионата России по CrossFit
                       </li>
                       <li class="trainer__item-text">Опыт — 6 лет</li>
-                    </ul></span
+                    </ul></div
                   >
                   <picture class="trainer__img">
                     <source
@@ -410,7 +411,7 @@
                   </picture>
                 </li>
                 <li class="trainer__item swiper-slide">
-                  <span class="trainer__item-name" instructor="CrossFit"
+                  <div class="trainer__item-name" data-instructor="CrossFit"
                     >Мария Кетова
                     <ul class="trainer__item-list">
                       <li class="trainer__item-text">
@@ -420,7 +421,7 @@
                         Победитель чемпионата России по CrossFit
                       </li>
                       <li class="trainer__item-text">Опыт — 6 лет</li>
-                    </ul></span
+                    </ul></div
                   >
                   <picture class="trainer__img">
                     <source
@@ -442,7 +443,7 @@
                   </picture>
                 </li>
                 <li class="trainer__item">
-                  <span class="trainer__item-name" instructor="CrossFit"
+                  <div class="trainer__item-name" data-instructor="CrossFit"
                     >Алексей Лавров
                     <ul class="trainer__item-list">
                       <li class="trainer__item-text">
@@ -452,7 +453,7 @@
                         Победитель чемпионата России по CrossFit
                       </li>
                       <li class="trainer__item-text">Опыт — 6 лет</li>
-                    </ul></span
+                    </ul></div
                   >
                   <picture class="trainer__img">
                     <source
@@ -474,7 +475,7 @@
                   </picture>
                 </li>
                 <li class="trainer__item swiper-slide">
-                  <span class="trainer__item-name" instructor="CrossFit"
+                  <div class="trainer__item-name" data-instructor="CrossFit"
                     >Анна Павлова
                     <ul class="trainer__item-list">
                       <li class="trainer__item-text">
@@ -484,7 +485,7 @@
                         Победитель чемпионата России по CrossFit
                       </li>
                       <li class="trainer__item-text">Опыт — 6 лет</li>
-                    </ul></span
+                    </ul></div
                   >
                   <picture class="trainer__img">
                     <source
@@ -506,7 +507,7 @@
                   </picture>
                 </li>
                 <li class="trainer__item swiper-slide">
-                  <span class="trainer__item-name" instructor="CrossFit"
+                  <div class="trainer__item-name" data-instructor="CrossFit"
                     >Александр Пашков
                     <ul class="trainer__item-list">
                       <li class="trainer__item-text">
@@ -516,7 +517,7 @@
                         Победитель чемпионата России по CrossFit
                       </li>
                       <li class="trainer__item-text">Опыт — 6 лет</li>
-                    </ul></span
+                    </ul></div
                   >
                   <picture class="trainer__img">
                     <source
@@ -551,7 +552,7 @@
             <h3 class="advantage__title">Наши преимущества</h3>
             <ul class="advantage__list">
               <li class="advantage__item">
-                <span class="advantage__iten-num" unit="кв/м">900</span>
+                <span class="advantage__iten-num" data-unit="кв/м">900</span>
                 <div class="advantage__item-info">
                   <h4 class="advantage__item-title">Площадь</h4>
                   <p class="advantage__item-text">
@@ -560,7 +561,7 @@
                 </div>
               </li>
               <li class="advantage__item">
-                <span class="advantage__iten-num" unit="машин">70</span>
+                <span class="advantage__iten-num" data-unit="машин">70</span>
                 <div class="advantage__item-info">
                   <h4 class="advantage__item-title">Собственная парковка</h4>
                   <p class="advantage__item-text">
@@ -578,7 +579,7 @@
                 </div>
               </li>
               <li class="advantage__item">
-                <span class="advantage__iten-num" unit="мест">350</span>
+                <span class="advantage__iten-num" data-unit="мест">350</span>
                 <div class="advantage__item-info">
                   <h4 class="advantage__item-title">Комфорт</h4>
                   <p class="advantage__item-text">
@@ -587,7 +588,7 @@
                 </div>
               </li>
               <li class="advantage__item">
-                <span class="advantage__iten-num" unit="лет">5+</span>
+                <span class="advantage__iten-num" data-unit="лет">5+</span>
                 <div class="advantage__item-info">
                   <h4 class="advantage__item-title">Тренерский опыт</h4>
                   <p class="advantage__item-text">
@@ -647,9 +648,9 @@
               <ul data-tab="1" class="faq__list faq__list--active">
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Как стать членом фитнес-центра?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -661,9 +662,9 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Где можно посмотреть расписание?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -675,9 +676,9 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Есть кулеры в центре? Предоставляются полотенца?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -690,10 +691,10 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Сколько тренеров работает в клубе и какова их
                       квалификация?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -708,9 +709,9 @@
               <ul data-tab="2" class="faq__list">
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Занятия с тренером входят в абонемент?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -723,9 +724,9 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Можно ли заморозить абонемент?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -737,10 +738,10 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Есть ли лимит по посещениям тренажерного зала и групповых
                       занятий?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -753,9 +754,9 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Что такое семейный доступ и доступ для друзей?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -770,10 +771,10 @@
               <ul data-tab="3" class="faq__list">
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Предлагает ли клуб услуги по консультированию по вопросам
                       питания?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -784,10 +785,10 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Проводятся ли в клубе какие-либо мероприятия или
                       соревнования?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -799,9 +800,9 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Можно ли приобрести в центре спортивное питание?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -814,9 +815,9 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Есть ли в центре детская комната?
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -831,9 +832,9 @@
               <ul data-tab="4" class="faq__list">
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Lorem ipsum dolor sit amet consectetur.
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -846,10 +847,10 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                       Facilis.
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -861,9 +862,9 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">
+                    <span class="faq__label-title">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </h4>
+                    </span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -876,7 +877,7 @@
                 </li>
                 <li class="faq__content">
                   <label class="faq__label">
-                    <h4 class="faq__label-title">Lorem ipsum dolor sit.</h4>
+                    <span class="faq__label-title">Lorem ipsum dolor sit.</span>
                     <input class="faq__checkbox" type="checkbox" />
                   </label>
                   <p class="faq__text">
@@ -969,39 +970,36 @@
           </div>
         </section>
         <section class="contacts">
-          <div class="contacts__wrap">
+          <div class="contacts__wrap" data-form-validate>
             <form
-              data-form-validate
-              data-callback="callback"
               class="contacts__form"
               action="http://echo.htmlacademy.ru"
               method="post"
             >
-              <h3 class="contacts__form-title">Бесплатное занятие</h4>
-              <fieldset data-required class="contacts__form-fieldset">
+              <h3 class="contacts__form-title">Бесплатное занятие</h3>
+              <fieldset class="contacts__form-fieldset">
+                <div data-validate-type="text" data-limitation="name" data-message-base="Не заполнено" data-message-extra="Проверьте корректность заполнения поля" data-required>
                 <label class="contacts__form-label">
-                  <input
-                    data-message-base="ОБязательно"
-                    data-limitation="digit"
-                    data-validate-type="text"
-                    type="text"
-                    class="contacts__form-field"
-                    name="Имя"
-                    placeholder="Имя"
-                    required
-                  />
-                </label>
+                    <input
+                      type="text"
+                      class="contacts__form-field"
+                      name="Имя"
+                      placeholder="Имя"
+                      required
+                    />
+                  </label>
+                </div>
+                <div data-validate-type="phone" data-on-input-validate data-message-base="Не заполнено" data-message-extra="Проверьте корректность заполнения поля" data-required>
                 <label class="contacts__form-label">
-                  <input
-                    data-message-base="ОБязательно"
-                    data-validate-type="phone"
-                    type="text"
-                    class="contacts__form-field"
-                    name="Телефон"
-                    placeholder="Телефон"
-                    required
-                  />
-                </label>
+                    <input
+                      type="text"
+                      class="contacts__form-field"
+                      name="Телефон"
+                      placeholder="Телефон"
+                      required
+                    />
+                  </label>
+                </div>
               </fieldset>
               <button class="contacts__form-btn">отправить</button>
             </form>

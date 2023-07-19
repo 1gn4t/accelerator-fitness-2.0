@@ -66,10 +66,11 @@
   &::before {
     content: "Тренажёрный зал Групповые занятия Кардио-зона ";
     position: absolute;
-    @include text-small;
     max-width: 113px;
     top: 118px;
     left: -79px;
+
+    @include text-small;
 
     @include vp-1199 {
       top: 82px;
@@ -114,8 +115,9 @@
     color: $primary;
   }
 
-  &::disable {
+  &--disable {
     opacity: 0.5;
+    pointer-events: none;
   }
 }
 

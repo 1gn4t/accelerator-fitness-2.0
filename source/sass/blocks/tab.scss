@@ -8,7 +8,6 @@
     content: "";
     background-repeat: no-repeat;
     background-image: url("../../img/background/barbells.png");
-    background-image: url("../../img/background/barbells.webp");
     background-size: contain;
     bottom: -135px;
     right: 0;
@@ -17,19 +16,16 @@
 
     @include retina {
       background-image: url("../../img/background/barbells@2x.png");
-      background-image: url("../../img/background/barbells@2x.webp");
     }
 
     @include vp-1023 {
       background-image: url("../../img/background/barbells-tablet.png");
-      background-image: url("../../img/background/barbells-tablet.webp");
       bottom: -130px;
       width: 347px;
       height: 444px;
 
       @include retina {
         background-image: url("../../img/background/barbells-tablet@2x.png");
-        background-image: url("../../img/background/barbells-tablet@2x.webp");
       }
     }
 
@@ -103,7 +99,7 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   color: rgba($primary, 0.5);
   border: none;
   background-color: inherit;
@@ -123,6 +119,7 @@
 
   &--active {
     color: $primary;
+
     &::before {
       position: absolute;
       content: "";
@@ -140,6 +137,7 @@
 
   @include hover-focus {
     color: $primary;
+
     &::before {
       position: absolute;
       content: "";
@@ -155,12 +153,10 @@
     }
   }
 
-  &::disable {
+  &--disable {
     opacity: 0.5;
+    pointer-events: none;
   }
-}
-
-.tab__container {
 }
 
 .tab__content {
@@ -220,7 +216,7 @@
   font-size: 26px;
   font-weight: 700;
   line-height: 29px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   color: $primary;
   margin: 0;
   padding: 0;
@@ -243,7 +239,7 @@
   font-size: 60px;
   font-weight: 700;
   line-height: 90px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   color: $blue;
   margin: 65px 0 35px 0;
   padding: 0;
@@ -257,11 +253,11 @@
 
   &::before {
     position: absolute;
-    content: attr(value);
+    content: attr(data-value);
     font-size: 100px;
     font-weight: 700;
     line-height: 150px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: left;
     color: #e8e8e8;
     z-index: -1;
@@ -308,7 +304,8 @@
     color: rgba($white, 0.5);
   }
 
-  &::disable {
+  &--disable {
     opacity: 0.5;
+    pointer-events: none;
   }
 }

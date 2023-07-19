@@ -1557,7 +1557,7 @@ button,
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-decoration: none;
   color: #ffffff;
 }
@@ -1691,14 +1691,14 @@ button,
 .hero__title::before {
   content: "Тренажёрный зал Групповые занятия Кардио-зона ";
   position: absolute;
+  max-width: 113px;
+  top: 118px;
+  left: -79px;
   font-family: "RobotoCondensed", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0em;
-  max-width: 113px;
-  top: 118px;
-  left: -79px;
+  letter-spacing: 0;
 }
 @media (max-width: 1199px) {
   .hero__title::before {
@@ -1755,8 +1755,9 @@ button,
   background-color: #ffffff;
   color: #102654;
 }
-.hero__btn::disable {
+.hero__btn--disable {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .hero__img {
@@ -1864,7 +1865,7 @@ button,
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   margin: 0;
   padding: 0;
@@ -1908,7 +1909,7 @@ button,
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   margin: 0;
   padding: 0;
 }
@@ -2056,7 +2057,6 @@ button,
   border-radius: 50%;
   border: none;
   background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
-  z-index: 1;
 }
 @media (max-width: 1023px) {
   .gym__video-play::after {
@@ -2114,19 +2114,20 @@ button,
   -webkit-transition: all 1s;
   transition: all 1s;
 }
-.gym__video-play::disable {
+.gym__video-play--disable {
   opacity: 0.5;
+  pointer-events: none;
   background-color: inherit;
   border: 2px solid #102654;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
-.gym__video-play::disable::after {
+.gym__video-play--disable::after {
   display: none;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
-.gym__video-play::disable::before {
+.gym__video-play--disable::before {
   background-color: #102654;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -2142,7 +2143,6 @@ button,
   content: "";
   background-repeat: no-repeat;
   background-image: url("../../img/background/barbells.png");
-  background-image: url("../../img/background/barbells.webp");
   background-size: contain;
   bottom: -135px;
   right: 0;
@@ -2152,13 +2152,11 @@ button,
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .tab::before {
     background-image: url("../../img/background/barbells@2x.png");
-    background-image: url("../../img/background/barbells@2x.webp");
   }
 }
 @media (max-width: 1023px) {
   .tab::before {
     background-image: url("../../img/background/barbells-tablet.png");
-    background-image: url("../../img/background/barbells-tablet.webp");
     bottom: -130px;
     width: 347px;
     height: 444px;
@@ -2167,7 +2165,6 @@ button,
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .tab::before {
     background-image: url("../../img/background/barbells-tablet@2x.png");
-    background-image: url("../../img/background/barbells-tablet@2x.webp");
   }
 }
 @media (max-width: 767px) {
@@ -2257,7 +2254,7 @@ button,
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   color: rgba(16, 38, 84, 0.5);
   border: none;
   background-color: inherit;
@@ -2330,8 +2327,9 @@ button,
     top: 38px;
   }
 }
-.tab__btn::disable {
+.tab__btn--disable {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .tab__content {
@@ -2405,7 +2403,7 @@ button,
   font-size: 26px;
   font-weight: 700;
   line-height: 29px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   color: #102654;
   margin: 0;
   padding: 0;
@@ -2422,7 +2420,7 @@ button,
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   margin: 10px 0 0 0;
   padding: 0;
 }
@@ -2433,7 +2431,7 @@ button,
   font-size: 60px;
   font-weight: 700;
   line-height: 90px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   color: #103aae;
   margin: 65px 0 35px 0;
   padding: 0;
@@ -2448,11 +2446,11 @@ button,
 }
 .tab__card-price::before {
   position: absolute;
-  content: attr(value);
+  content: attr(data-value);
   font-size: 100px;
   font-weight: 700;
   line-height: 150px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #e8e8e8;
   z-index: -1;
@@ -2505,8 +2503,9 @@ button,
 .tab__card-link.focus-visible:active {
   color: rgba(255, 255, 255, 0.5);
 }
-.tab__card-link::disable {
+.tab__card-link--disable {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .super-game {
@@ -2540,7 +2539,6 @@ button,
   max-width: 1160px;
   background-color: #ed0233;
   background-image: url("../../img/background/game.png");
-  background-image: url("../../img/background/game.webp");
   background-size: 660px 500px;
   background-repeat: no-repeat;
   background-position: right;
@@ -2549,7 +2547,6 @@ button,
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .super-game__wrap {
     background-image: url("../../img/background/game@2x.png");
-    background-image: url("../../img/background/game@2x.webp");
   }
 }
 @media (max-width: 1023px) {
@@ -2582,7 +2579,7 @@ button,
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
 }
 @media (max-width: 1023px) {
   .super-game__info {
@@ -2642,7 +2639,7 @@ button,
   font-size: 40px;
   font-weight: 700;
   line-height: 60px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   border-top: solid 2px #ffffff;
 }
@@ -2734,8 +2731,9 @@ button,
   background-color: #ffffff;
   color: #102654;
 }
-.super-game__link::disable {
+.super-game__link--disable {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .trainer__wrap {
@@ -2869,8 +2867,9 @@ button,
 .trainer__btn.focus-visible:active {
   background-color: #102654;
 }
-.trainer__btn::disable {
+.trainer__btn--disable {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 @media (max-width: 767px) {
@@ -2897,6 +2896,11 @@ button,
   padding: 0;
   margin: 0;
 }
+.trainer__item--active .trainer__item-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .trainer__item--active .trainer__item-name {
   background: rgba(16, 38, 84, 0.89);
   width: 100%;
@@ -2914,14 +2918,14 @@ button,
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0em;
-}
-.trainer__item--active .trainer__item-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  letter-spacing: 0;
 }
 @media (hover: hover) {
+  .trainer__item:hover:not(.focus-visible) .trainer__item-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .trainer__item:hover:not(.focus-visible) .trainer__item-name {
     background: rgba(16, 38, 84, 0.89);
     width: 100%;
@@ -2931,7 +2935,7 @@ button,
     padding: 55px 0 0;
   }
   .trainer__item:hover:not(.focus-visible) .trainer__item-name::before {
-    content: attr(instructor);
+    content: attr(data-instructor);
     position: absolute;
     top: 75px;
     left: 105px;
@@ -2939,13 +2943,13 @@ button,
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
   }
-  .trainer__item:hover:not(.focus-visible) .trainer__item-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+}
+.trainer__item.focus-visible:focus .trainer__item-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .trainer__item.focus-visible:focus .trainer__item-name {
   background: rgba(16, 38, 84, 0.89);
@@ -2956,7 +2960,7 @@ button,
   padding: 55px 0 0;
 }
 .trainer__item.focus-visible:focus .trainer__item-name::before {
-  content: attr(instructor);
+  content: attr(data-instructor);
   position: absolute;
   top: 75px;
   left: 105px;
@@ -2964,12 +2968,7 @@ button,
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0em;
-}
-.trainer__item.focus-visible:focus .trainer__item-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  letter-spacing: 0;
 }
 
 .trainer__item-name {
@@ -2978,7 +2977,7 @@ button,
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: center;
   color: #ffffff;
   z-index: 2;
@@ -2995,7 +2994,7 @@ button,
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   list-style-type: disc;
   display: none;
@@ -3118,7 +3117,7 @@ button,
 .advantage__item {
   font-family: "RobotoCondensed", sans-serif;
   font-weight: 700;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #102654;
   display: -webkit-box;
@@ -3180,7 +3179,7 @@ button,
   }
 }
 .advantage__iten-num::before {
-  content: attr(unit);
+  content: attr(data-unit);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3188,7 +3187,7 @@ button,
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #103aae;
 }
@@ -3436,7 +3435,7 @@ button,
   gap: 70px;
   font-family: "RobotoCondensed", sans-serif;
   font-weight: 700;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #102654;
   margin: 0;
@@ -3472,7 +3471,7 @@ button,
   gap: 190px;
   grid-area: main;
   font-family: "RobotoCondensed", sans-serif;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ffffff;
   background-color: #ed0233;
@@ -3512,7 +3511,7 @@ button,
   font-size: 28px;
   font-weight: 700;
   line-height: 44px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
 }
 @media (max-width: 767px) {
   .stock__item--main .stock__item-title::before {
@@ -3653,8 +3652,9 @@ button,
 .stock__item-link.focus-visible:focus--main {
   border: 1px solid #ffffff;
 }
-.stock__item-link:disable {
+.stock__item-link--disable {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .faq {
@@ -3760,7 +3760,7 @@ button,
   font-size: 18px;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: center;
   color: #102654;
   margin: 0;
@@ -3789,7 +3789,7 @@ button,
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #102654;
   margin: 0;
@@ -3925,8 +3925,8 @@ button,
   height: 42px;
   border-radius: 50%;
   border: 1px solid #102654;
-  background: -webkit-gradient(linear, left top, left bottom, from(#102654), to(#102654)), -webkit-gradient(linear, left top, left bottom, from(#102654), to(#102654)), #ffffff;
-  background: linear-gradient(#102654, #102654), linear-gradient(#102654, #102654), #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#102654), to(#102654)), -webkit-gradient(linear, left top, left bottom, from(#102654), to(#102654)) #ffffff;
+  background: linear-gradient(#102654, #102654), linear-gradient(#102654, #102654) #ffffff;
   background-position: center;
   background-size: 50% 1px, 1px 50%;
   background-repeat: no-repeat;
@@ -4065,8 +4065,9 @@ button,
 .review__btn.focus-visible:active {
   background-color: #102654;
 }
-.review__btn::disable {
+.review__btn--disable {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .review__title {
@@ -4156,7 +4157,7 @@ button,
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ffffff;
 }
@@ -4305,7 +4306,7 @@ button,
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ffffff;
 }
@@ -4314,7 +4315,7 @@ button,
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ffffff;
 }
@@ -4323,7 +4324,7 @@ button,
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ffffff;
 }
@@ -4332,7 +4333,7 @@ button,
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ffffff;
 }
@@ -4341,7 +4342,7 @@ button,
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ffffff;
 }
@@ -4388,8 +4389,16 @@ button,
 .contacts__form-field.focus-visible:active::placeholder {
   font-size: 0;
 }
-.contacts__form-field:disable {
+.contacts__form-field--disable {
   opacity: 0.5;
+  pointer-events: none;
+}
+
+.is-invalid {
+  color: #d10a42;
+}
+.is-invalid .contacts__form-field {
+  border-bottom: 1px solid #d10a42;
 }
 
 .contacts__form-btn {
@@ -4412,6 +4421,23 @@ button,
     padding: 15px;
     max-width: 470px;
   }
+}
+@media (hover: hover) {
+  .contacts__form-btn:hover:not(.focus-visible) {
+    background-color: #ffffff;
+    color: #102654;
+  }
+}
+.contacts__form-btn.focus-visible:focus {
+  background-color: #ffffff;
+  color: #102654;
+}
+.contacts__form-btn.focus-visible:active {
+  color: rgba(16, 38, 84, 0.2);
+}
+.contacts__form-btn--disable {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .contacts__container {
@@ -4507,7 +4533,7 @@ button,
           flex-direction: column;
   gap: 4px;
   font-family: "RobotoCondensed", sans-serif;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   margin: 0;
   padding: 0 0 15px;

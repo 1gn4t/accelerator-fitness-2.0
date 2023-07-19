@@ -1,6 +1,3 @@
-.review {
-}
-
 .review__wrap {
   position: relative;
   display: flex;
@@ -78,10 +75,12 @@
     background-color: $primary;
   }
 
-  &::disable {
+  &--disable {
     opacity: 0.5;
+    pointer-events: none;
   }
 }
+
 .review__title {
   font-family: "Alumni Sans", sans-serif;
   font-size: 54px;
@@ -156,7 +155,7 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: $white;
 

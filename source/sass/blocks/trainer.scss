@@ -1,6 +1,3 @@
-.trainer {
-}
-
 .trainer__wrap {
   position: relative;
   display: flex;
@@ -59,16 +56,20 @@
     transform: rotate(180deg);
     bottom: 45%;
     left: -3%;
+
     @include vp-1279 {
       left: -0.5%;
     }
+
     @include vp-1199 {
       left: -1px;
     }
+
     @include vp-1023 {
       bottom: 48%;
       left: 45px;
     }
+
     @include vp-767 {
       bottom: 50%;
       left: 15px;
@@ -78,18 +79,22 @@
   &--next {
     bottom: 45%;
     right: -3%;
+
     @include vp-1279 {
       bottom: 45%;
       right: -0.5%;
     }
+
     @include vp-1199 {
       bottom: 45%;
       right: -1px;
     }
+
     @include vp-1023 {
       bottom: 48%;
       right: 45px;
     }
+
     @include vp-767 {
       bottom: 50%;
       right: 15px;
@@ -104,8 +109,9 @@
     background-color: $primary;
   }
 
-  &::disable {
+  &--disable {
     opacity: 0.5;
+    pointer-events: none;
   }
 }
 
@@ -134,6 +140,10 @@
   margin: 0;
 
   &--active {
+    .trainer__item-list {
+      display: flex;
+    }
+
     .trainer__item-name {
       background: rgba(16, 38, 84, 0.89);
       width: 100%;
@@ -141,6 +151,7 @@
       max-width: 260px;
       bottom: -5%;
       padding: 55px 0 0;
+
       &::before {
         content: attr(instructor);
         position: absolute;
@@ -150,15 +161,16 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        letter-spacing: 0em;
+        letter-spacing: 0;
       }
-    }
-    .trainer__item-list {
-      display: flex;
     }
   }
 
   @include hover-focus {
+    .trainer__item-list {
+      display: flex;
+    }
+
     .trainer__item-name {
       background: rgba(16, 38, 84, 0.89);
       width: 100%;
@@ -166,8 +178,9 @@
       max-width: 260px;
       bottom: -5%;
       padding: 55px 0 0;
+
       &::before {
-        content: attr(instructor);
+        content: attr(data-instructor);
         position: absolute;
         top: 75px;
         left: 105px;
@@ -175,11 +188,8 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        letter-spacing: 0em;
+        letter-spacing: 0;
       }
-    }
-    .trainer__item-list {
-      display: flex;
     }
   }
 }
@@ -190,7 +200,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: center;
   color: $white;
   z-index: 2;
@@ -205,7 +215,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   list-style-type: disc;
   display: none;
