@@ -13,7 +13,7 @@
   }
 
   @include vp-767 {
-    padding: 0 47px 105px;
+    padding: 0 47px 110px;
     gap: 45px;
   }
 }
@@ -54,8 +54,8 @@
 
   &--prev {
     transform: rotate(180deg);
-    bottom: 45%;
-    left: -3%;
+    bottom: 43%;
+    left: -5%;
 
     @include vp-1279 {
       left: -0.5%;
@@ -66,19 +66,19 @@
     }
 
     @include vp-1023 {
-      bottom: 48%;
-      left: 45px;
+      bottom: 47%;
+      left: 27px;
     }
 
     @include vp-767 {
-      bottom: 50%;
-      left: 15px;
+      bottom: 46%;
+      left: -5px;
     }
   }
 
   &--next {
-    bottom: 45%;
-    right: -3%;
+    bottom: 43%;
+    right: -5%;
 
     @include vp-1279 {
       bottom: 45%;
@@ -91,13 +91,13 @@
     }
 
     @include vp-1023 {
-      bottom: 48%;
-      right: 45px;
+      bottom: 47%;
+      right: 27px;
     }
 
     @include vp-767 {
-      bottom: 50%;
-      right: 15px;
+      bottom: 46%;
+      right: -5px;
     }
   }
 

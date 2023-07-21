@@ -1,5 +1,5 @@
 // Swiper 7.4.1
-import './vendor/swiper';
+import Swiper from './vendor/swiper';
 import './vendor/focus-visible-polyfill';
 
 export const sliderTrainer = new Swiper('.trainer__slider', {

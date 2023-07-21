@@ -121,7 +121,6 @@
 }
 
 // custom message
-
 .is-invalid {
   color: $red;
 
@@ -174,7 +173,7 @@
   border-top: 1px solid $grey-border;
 
   @include vp-1023 {
-    padding: 45px 59px 50px 132px;
+    padding: 45px 59px 44px 132px;
     gap: 38px;
   }
 
@@ -244,16 +243,12 @@
   }
 
   &--address {
-    order: 1;
-
     @include vp-767 {
       order: 1;
     }
   }
 
   &--tel {
-    order: 2;
-
     @include vp-767 {
       order: 3;
     }

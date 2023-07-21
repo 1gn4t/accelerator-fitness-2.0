@@ -3,6 +3,7 @@
 }
 
 .footer__wrap {
+  position: relative;
   justify-content: space-between;
   font-family: "Alumni Sans", sans-serif;
   font-weight: 600;
@@ -12,8 +13,18 @@
   max-width: $vp-1200;
 
   @include vp-1199 {
-    padding: 48px 45px;
+    padding: 35px 45px 45px;
     flex-wrap: wrap;
+  }
+
+  @include vp-767 {
+    padding: 45px 15px 40px;
+    gap: 35px;
+    justify-content: center;
+  }
+
+  @include vp-374 {
+    flex-direction: column;
   }
 }
 
@@ -29,6 +40,15 @@
     font-weight: 700;
     line-height: 29px;
   }
+
+  @include vp-374 {
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
 }
 
 .footer__list {
@@ -40,15 +60,44 @@
 
   @include vp-1199 {
     gap: 30px;
+    flex-wrap: wrap;
   }
 
-  @include vp-767 {
-    flex-wrap: wrap;
+  @include vp-374 {
+    display: grid;
+    grid-template-areas: "stock stock" "services trainer" "sub schedule";
+    row-gap: 16px;
+    column-gap: 25px;
   }
 }
 
 .footer__item {
   align-self: center;
+
+  &--schedule {
+    grid-area: schedule;
+  }
+
+  &--services {
+    grid-area: services;
+  }
+
+  &--stock {
+    grid-area: stock;
+
+    @include vp-374 {
+      justify-self: end;
+      padding: 0 89px 0 0;
+    }
+  }
+
+  &--sub {
+    grid-area: sub;
+  }
+
+  &--trainer {
+    grid-area: trainer;
+  }
 }
 
 .footer__link {
@@ -63,6 +112,11 @@
   @include vp-1199 {
     font-size: 14px;
     line-height: 16px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 

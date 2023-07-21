@@ -214,7 +214,7 @@
     background-color: $white;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     transform: rotate(90deg);
-    z-index: 2;
+    z-index: 11;
 
     @include vp-1023 {
       width: 10px;
