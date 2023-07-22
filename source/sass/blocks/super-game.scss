@@ -20,14 +20,14 @@
   padding: 0;
   max-width: $vp-1200 - 40px;
   background-color: $banners;
-  background-image: url("../../img/background/game.png");
+  background-image: url("../img/background/game.png");
   background-size: 660px 500px;
   background-repeat: no-repeat;
   background-position: right;
   color: $white;
 
   @include retina {
-    background-image: url("../../img/background/game@2x.png");
+    background-image: url("../img/background/game@2x.png");
   }
 
   @include vp-1023 {

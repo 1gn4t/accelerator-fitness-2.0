@@ -1243,8 +1243,8 @@ button.swiper-pagination-bullet {
   font-weight: 600;
   font-family: "Alumni Sans";
   font-display: swap;
-  src: url("../../fonts/AlumniSans-SemiBold.woff") format("woff");
-  src: url("../../fonts/AlumniSans-SemiBold.woff2") format("woff2");
+  src: url("../fonts/AlumniSans-SemiBold.woff") format("woff");
+  src: url("../fonts/AlumniSans-SemiBold.woff2") format("woff2");
 }
 
 @font-face {
@@ -1252,8 +1252,8 @@ button.swiper-pagination-bullet {
   font-weight: 300;
   font-family: "RobotoCondensed";
   font-display: swap;
-  src: url("../../fonts/RobotoCondensed-Light.woff") format("woff");
-  src: url("../../fonts/RobotoCondensed-Light.woff2") format("woff2");
+  src: url("../fonts/RobotoCondensed-Light.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Light.woff2") format("woff2");
 }
 
 @font-face {
@@ -1261,8 +1261,8 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-family: "RobotoCondensed";
   font-display: swap;
-  src: url("../../fonts/RobotoCondensed-Regular.woff") format("woff");
-  src: url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2");
+  src: url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -1270,8 +1270,8 @@ button.swiper-pagination-bullet {
   font-weight: 600;
   font-family: "RobotoCondensed";
   font-display: swap;
-  src: url("../../fonts/RobotoCondensed-Bold.woff") format("woff");
-  src: url("../../fonts/RobotoCondensed-Bold.woff2") format("woff2");
+  src: url("../fonts/RobotoCondensed-Bold.woff") format("woff");
+  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2");
 }
 
 *,
@@ -1844,7 +1844,7 @@ button,
   border-radius: 50%;
   border: none;
   background-color: inherit;
-  background-image: url("../../img/background/background-play.svg");
+  background-image: url("../img/background/background-play.svg");
   background-repeat: no-repeat;
   background-position: center;
   padding: 0;
@@ -1952,7 +1952,7 @@ button,
   position: absolute;
   content: "";
   background-repeat: no-repeat;
-  background-image: url("../../img/background/barbells.png");
+  background-image: url("../img/background/barbells.png");
   background-size: contain;
   bottom: -135px;
   right: 0;
@@ -2183,7 +2183,7 @@ button,
   padding: 0;
   max-width: 1160px;
   background-color: #ed0233;
-  background-image: url("../../img/background/game.png");
+  background-image: url("../img/background/game.png");
   background-size: 660px 500px;
   background-repeat: no-repeat;
   background-position: right;
@@ -2733,7 +2733,7 @@ button,
   text-align: left;
   color: #ffffff;
   background-color: #ed0233;
-  background-image: url("../../img/background/promotion.png");
+  background-image: url("../img/background/promotion.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: right;
@@ -4354,7 +4354,7 @@ button,
   }
 
   .tab::before {
-    background-image: url("../../img/background/barbells-tablet.png");
+    background-image: url("../img/background/barbells-tablet.png");
     bottom: -130px;
     width: 347px;
     height: 444px;
@@ -4512,7 +4512,7 @@ button,
   }
 
   .stock__item--main {
-    background-image: url("../../img/background/promotion-tablet.png");
+    background-image: url("../img/background/promotion-tablet.png");
   }
 
   .stock__item--free .stock__item-text {
@@ -4663,11 +4663,11 @@ button,
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .tab::before {
-    background-image: url("../../img/background/barbells-tablet@2x.png");
+    background-image: url("../img/background/barbells-tablet@2x.png");
   }
 
   .stock__item--main {
-    background-image: url("../../img/background/promotion-tablet@2x.png");
+    background-image: url("../img/background/promotion-tablet@2x.png");
   }
 }
 
@@ -5003,7 +5003,7 @@ button,
     background-position: bottom;
     background-size: auto 300px;
     text-align: center;
-    background-image: url("../../img/background/promotion-mobile.png");
+    background-image: url("../img/background/promotion-mobile.png");
   }
 
   .stock__item--main .stock__item-title {
@@ -5251,7 +5251,7 @@ button,
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .stock__item--main {
-    background-image: url("../../img/background/promotion-mobile@2x.png");
+    background-image: url("../img/background/promotion-mobile@2x.png");
   }
 }
 
@@ -5501,14 +5501,14 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .tab::before {
-    background-image: url("../../img/background/barbells@2x.png");
+    background-image: url("../img/background/barbells@2x.png");
   }
 
   .super-game__wrap {
-    background-image: url("../../img/background/game@2x.png");
+    background-image: url("../img/background/game@2x.png");
   }
 
   .stock__item--main {
-    background-image: url("../../img/background/promotion@2x.png");
+    background-image: url("../img/background/promotion@2x.png");
   }
 }

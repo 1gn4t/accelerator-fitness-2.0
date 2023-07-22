@@ -100,7 +100,7 @@
     text-align: left;
     color: $white;
     background-color: $banners;
-    background-image: url("../../img/background/promotion.png");
+    background-image: url("../img/background/promotion.png");
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: right;
@@ -108,14 +108,14 @@
     border: none;
 
     @include retina {
-      background-image: url("../../img/background/promotion@2x.png");
+      background-image: url("../img/background/promotion@2x.png");
     }
 
     @include vp-1023 {
-      background-image: url("../../img/background/promotion-tablet.png");
+      background-image: url("../img/background/promotion-tablet.png");
 
       @include retina {
-        background-image: url("../../img/background/promotion-tablet@2x.png");
+        background-image: url("../img/background/promotion-tablet@2x.png");
       }
     }
 
@@ -125,10 +125,10 @@
       background-position: bottom;
       background-size: auto 300px;
       text-align: center;
-      background-image: url("../../img/background/promotion-mobile.png");
+      background-image: url("../img/background/promotion-mobile.png");
 
       @include retina {
-        background-image: url("../../img/background/promotion-mobile@2x.png");
+        background-image: url("../img/background/promotion-mobile@2x.png");
       }
     }
 

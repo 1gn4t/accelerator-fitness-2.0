@@ -7,7 +7,7 @@
     position: absolute;
     content: "";
     background-repeat: no-repeat;
-    background-image: url("../../img/background/barbells.png");
+    background-image: url("../img/background/barbells.png");
     background-size: contain;
     bottom: -135px;
     right: 0;
@@ -15,17 +15,17 @@
     height: 494px;
 
     @include retina {
-      background-image: url("../../img/background/barbells@2x.png");
+      background-image: url("../img/background/barbells@2x.png");
     }
 
     @include vp-1023 {
-      background-image: url("../../img/background/barbells-tablet.png");
+      background-image: url("../img/background/barbells-tablet.png");
       bottom: -130px;
       width: 347px;
       height: 444px;
 
       @include retina {
-        background-image: url("../../img/background/barbells-tablet@2x.png");
+        background-image: url("../img/background/barbells-tablet@2x.png");
       }
     }
 
